@@ -1,0 +1,91 @@
+﻿@model Emprunt
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Styles spécifiques à cette page */
+        
+
+        h1 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        h4 {
+            color: #28a745;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        a {
+            color: #007bff;
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Create</h1>
+
+        <h4>Emprunt</h4>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="LivreId" class="control-label"></label>
+                        <input asp-for="LivreId" class="form-control" />
+                        <span asp-validation-for="LivreId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="AbonneId" class="control-label"></label>
+                        <input asp-for="AbonneId" class="form-control" />
+                        <span asp-validation-for="AbonneId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DateEmprunt" class="control-label"></label>
+                        <input asp-for="DateEmprunt" class="form-control" />
+                        <span asp-validation-for="DateEmprunt" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DateRetour" class="control-label"></label>
+                        <input asp-for="DateRetour" class="form-control" />
+                        <span asp-validation-for="DateRetour" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

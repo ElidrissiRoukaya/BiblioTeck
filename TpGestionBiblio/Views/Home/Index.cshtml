@@ -1,0 +1,96 @@
+﻿@{
+    ViewData["Title"] = "Bienvenue dans  notre Bibliothèque";
+}
+@{
+    ViewData["HideDefaultNavBar"] = true;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewData["Title"]</title>
+   
+    <style>
+        /* Personnalisation des couleurs et du style */
+        body {
+            background-color: #f8f9fa; /* Couleur d'arrière-plan */
+        }
+
+        .navbar {
+            background-color: #f8f9fa; /* Couleur de la barre de navigation */
+            width: 100vw; /* Largeur de la barre de navigation = largeur de la fenêtre */
+            margin-left: calc(-50vw + 50%); /* Centrage horizontal */
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #ffffff; /* Couleur du texte dans la barre de navigation */
+        }
+
+        .navbar-dark .navbar-toggler-icon {
+            background-color: #ffffff; /* Couleur de l'icône de bascule de navigation */
+        }
+
+        .card {
+            background-color: #ffffff; /* Couleur de fond des cartes */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand text-dark" asp-area="" asp-controller="Home" asp-action="Index">TpGestionBiblio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<div class="bg-library text-center">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="title">@ViewData["Title"] &#x1F60A;</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+    <img src="https://th.bing.com/th?id=OIP.QhQeY9ouz4UIXZWvIGnYMAHaIa&w=234&h=266&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="" class="img-fluid mx-auto d-block" style="max-width: 200px; margin-bottom: 20px;">
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Emprunter un Livre</h3>
+                        <a asp-action="Emprunterlivre" asp-controller="Emprunts" class="btn btn-primary btn-block">Emprunter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h3 class="card-title"> les Livres Disponibles</h3>
+                        <a asp-action="LivresDisponibles" asp-controller="Emprunts" class="btn btn-success btn-block"> voir les Livres Disponibles</a>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+</div>
+    </body>
+    </html>

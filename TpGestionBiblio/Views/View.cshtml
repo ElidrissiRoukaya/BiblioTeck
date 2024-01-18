@@ -1,0 +1,45 @@
+﻿@model Emprunt
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>View</h1>
+
+<h4>Emprunt</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="View">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="LivreId" class="control-label"></label>
+                <input asp-for="LivreId" class="form-control" />
+                <span asp-validation-for="LivreId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AbonneId" class="control-label"></label>
+                <input asp-for="AbonneId" class="form-control" />
+                <span asp-validation-for="AbonneId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateEmprunt" class="control-label"></label>
+                <input asp-for="DateEmprunt" class="form-control" />
+                <span asp-validation-for="DateEmprunt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateRetour" class="control-label"></label>
+                <input asp-for="DateRetour" class="form-control" />
+                <span asp-validation-for="DateRetour" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

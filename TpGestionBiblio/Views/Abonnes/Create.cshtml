@@ -1,0 +1,83 @@
+﻿@model Abonne
+
+@{
+    ViewData["Title"] = "Create";
+}
+<style>
+    /* Style pour le titre */
+    h1 {
+        color: #1E90FF;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    /* Style pour les libellés */
+    label {
+        color: #696969;
+        margin-bottom: 5px;
+    }
+
+    /* Style pour les champs de saisie */
+    .form-control {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #A9A9A9;
+        border-radius: 4px;
+    }
+
+    /* Style pour le bouton */
+    .btn-primary {
+        background-color: #1E90FF;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        /* Style au survol du bouton */
+        .btn-primary:hover {
+            background-color: #4682B4;
+        }
+
+    /* Style pour le lien */
+    a {
+        color: #1E90FF;
+        text-decoration: none;
+    }
+
+        /* Style au survol du lien */
+        a:hover {
+            text-decoration: underline;
+        }
+</style>
+
+<h1>Create</h1>
+
+<h4>Abonne</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nom" class="control-label"></label>
+                <input asp-for="Nom" class="form-control" />
+                <span asp-validation-for="Nom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Prenom" class="control-label"></label>
+                <input asp-for="Prenom" class="form-control" />
+                <span asp-validation-for="Prenom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

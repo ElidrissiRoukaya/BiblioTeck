@@ -1,0 +1,96 @@
+﻿@model IEnumerable<Emprunt>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    /* Style pour le titre */
+    h1 {
+        color: #008000;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    /* Style pour les liens */
+    a {
+        color: #DC143C;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+
+        /* Style pour les liens au survol */
+        a:hover {
+            text-decoration: underline;
+        }
+
+    /* Style pour le tableau */
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    /* Style pour les cellules d'en-tête */
+    th {
+        background-color: #FFE4C4;
+        color: #008000;
+        font-weight: bold;
+        padding: 10px;
+        text-align: left;
+    }
+
+    /* Style pour les cellules de données */
+    td {
+        padding: 10px;
+        border-bottom: 1px solid #008000;
+    }
+
+</style>
+<h1>Gestions des emprunts</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Ajouter un emprunt</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LivreId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AbonneId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateEmprunt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateRetour)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LivreId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AbonneId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateEmprunt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateRetour)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info btn-action">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-success btn-action">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-action">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

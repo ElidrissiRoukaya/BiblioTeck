@@ -1,0 +1,127 @@
+﻿@model IEnumerable<Abonne>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Style pour le titre */
+        h1 {
+            color: #006400;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Style pour les liens */
+        a {
+            color: #006400;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+            /* Style au survol des liens */
+            a:hover {
+                text-decoration: underline;
+            }
+
+        /* Style pour le tableau */
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        /* Style pour les cellules d'en-tête */
+        th {
+            background-color: #f8f9fa;
+            color: #BDB76B;
+            font-weight: bold;
+            padding: 10px;
+            text-align: left;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        /* Style pour les lignes de données */
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        /* Style pour les liens d'action */
+        .action-links a {
+            margin-right: 10px;
+            color: #BDB76B;
+            text-decoration: none;
+        }
+
+            /* Style au survol des liens d'action */
+            .action-links a:hover {
+                text-decoration: underline;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gestion des abonnés</h1>
+
+        <p class="action-links">
+            <a asp-action="Create">Create New</a>
+        </p>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstOrDefault().Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstOrDefault().Nom)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstOrDefault().Prenom)
+                    </th>
+                    <th >Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nom)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Prenom)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1159/1159633.png" width="30" height="30" />
+                            </a>
+                       
+                            <a asp-action="Details" asp-route-id="@item.Id">
+                                <img src="https://cdn-icons-png.flaticon.com/128/2767/2767194.png" width="30" height="30" />
+                            </a>
+                        
+                            <a asp-action="Delete" asp-route-id="@item.Id">
+                                <img src="https://cdn-icons-png.flaticon.com/128/484/484611.png" width="30" height="30" />
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
