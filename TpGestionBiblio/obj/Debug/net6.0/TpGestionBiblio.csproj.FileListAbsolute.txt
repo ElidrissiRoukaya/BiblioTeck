@@ -277,6 +277,7 @@ C:\Users\USER\source\repos\TpGestionBiblio\TpGestionBiblio\obj\Debug\net6.0\refi
 C:\Users\USER\source\repos\TpGestionBiblio\TpGestionBiblio\obj\Debug\net6.0\TpGestionBiblio.pdb
 C:\Users\USER\source\repos\TpGestionBiblio\TpGestionBiblio\obj\Debug\net6.0\TpGestionBiblio.genruntimeconfig.cache
 C:\Users\USER\source\repos\TpGestionBiblio\TpGestionBiblio\obj\Debug\net6.0\ref\TpGestionBiblio.dll
+<<<<<<< HEAD
 C:\Users\hp\Downloads\GestionBiblioth-queCRUD--main\GestionBiblioth-queCRUD--main\TpGestionBiblio\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\hp\Downloads\GestionBiblioth-queCRUD--main\GestionBiblioth-queCRUD--main\TpGestionBiblio\bin\Debug\net6.0\appsettings.json
 C:\Users\hp\Downloads\GestionBiblioth-queCRUD--main\GestionBiblioth-queCRUD--main\TpGestionBiblio\bin\Debug\net6.0\TpGestionBiblio.staticwebassets.runtime.json
@@ -566,3 +567,5 @@ C:\Users\hp\Downloads\GestionBiblioth-queCRUD--main\GestionBiblioth-queCRUD--mai
 C:\Users\hp\Downloads\GestionBiblioth-queCRUD--main\GestionBiblioth-queCRUD--main\TpGestionBiblio\obj\Debug\net6.0\TpGestionBiblio.pdb
 C:\Users\hp\Downloads\GestionBiblioth-queCRUD--main\GestionBiblioth-queCRUD--main\TpGestionBiblio\obj\Debug\net6.0\TpGestionBiblio.genruntimeconfig.cache
 C:\Users\hp\Downloads\GestionBiblioth-queCRUD--main\GestionBiblioth-queCRUD--main\TpGestionBiblio\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+=======
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04

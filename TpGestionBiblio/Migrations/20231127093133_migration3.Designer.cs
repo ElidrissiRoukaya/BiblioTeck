@@ -2,10 +2,8 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-<<<<<<< HEAD
-=======
 using Microsoft.EntityFrameworkCore.Metadata;
->>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TpGestionBiblio.Data;
 
@@ -14,20 +12,17 @@ using TpGestionBiblio.Data;
 namespace TpGestionBiblio.Migrations
 {
     [DbContext(typeof(BiblioDbContext))]
-    partial class BiblioDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231127093133_migration3")]
+    partial class migration3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "6.0.24")
-<<<<<<< HEAD
-                .HasAnnotation("Relational:MaxIdentifierLength", 64);
-=======
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
->>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
 
             modelBuilder.Entity("Abonne", b =>
                 {
@@ -35,37 +30,17 @@ namespace TpGestionBiblio.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-<<<<<<< HEAD
-=======
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
->>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
                     b.Property<string>("Nom")
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
-<<<<<<< HEAD
-                    b.Property<string>("Password")
-                        .HasColumnType("longtext");
-
-=======
->>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
                     b.Property<string>("Prenom")
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
-<<<<<<< HEAD
-                    b.Property<string>("Username")
-                        .HasColumnType("longtext");
+                    b.HasKey("Id");
 
-=======
->>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
-                    b.HasKey("Id")
-                        .HasName("PK_Abonne");
-
-                    b.ToTable("Abonnes", (string)null);
+                    b.ToTable("Abonnes");
                 });
 
             modelBuilder.Entity("Emprunt", b =>
@@ -74,47 +49,27 @@ namespace TpGestionBiblio.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-<<<<<<< HEAD
-=======
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
->>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
                     b.Property<int>("AbonneId")
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
                         .HasColumnType("int");
 
                     b.Property<DateTime>("DateEmprunt")
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-<<<<<<< HEAD
-                        .HasColumnType("datetime(6)");
-=======
                         .HasColumnType("datetime2");
->>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
 
                     b.Property<DateTime>("DateRetour")
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-<<<<<<< HEAD
-                        .HasColumnType("datetime(6)");
-=======
                         .HasColumnType("datetime2");
->>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
 
                     b.Property<int>("LivreId")
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
                         .HasColumnType("int");
 
-                    b.HasKey("Id")
-                        .HasName("PK_Emprunt");
+                    b.HasKey("Id");
 
                     b.HasIndex("AbonneId");
 
                     b.HasIndex("LivreId");
 
-                    b.ToTable("Emprunts", (string)null);
+                    b.ToTable("Emprunts");
                 });
 
             modelBuilder.Entity("Livre", b =>
@@ -123,39 +78,23 @@ namespace TpGestionBiblio.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-<<<<<<< HEAD
-=======
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
->>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
                     b.Property<string>("Auteur")
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("EstEmprunte")
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-<<<<<<< HEAD
-                        .HasColumnType("tinyint(50)");
-=======
                         .HasColumnType("bit");
->>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
 
                     b.Property<string>("Resume")
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Titre")
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id")
-                        .HasName("PK_Livre");
+                    b.HasKey("Id");
 
-                    b.ToTable("Livres", (string)null);
+                    b.ToTable("Livres");
                 });
 
             modelBuilder.Entity("Emprunt", b =>

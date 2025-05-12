@@ -193,7 +193,12 @@ namespace TpGestionBiblio.Controllers
         }
 
         // POST: Emprunts/Edit/5
+<<<<<<< HEAD
        
+=======
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,LivreId,AbonneId,DateEmprunt,DateRetour")] Emprunt emprunt)

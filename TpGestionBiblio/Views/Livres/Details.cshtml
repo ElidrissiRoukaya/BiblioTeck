@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Details";
 }
+<<<<<<< HEAD
 @{
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
     ViewData["Title"] = "Dashboard";
@@ -19,6 +20,24 @@
         color: #555;
         margin-bottom: 10px;
     }
+=======
+
+<style>
+    /* Style pour les labels */
+    .col-sm-2 {
+        font-weight: bold;
+        color: #333; /* Couleur du texte */
+        margin-bottom: 5px; /* Espacement bas */
+    }
+
+    /* Style pour l'affichage des données */
+    .col-sm-10 {
+        color: #555; /* Couleur du texte */
+        margin-bottom: 10px; /* Espacement bas */
+    }
+
+
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
 </style>
 
 <h1>Details Livre</h1>
@@ -59,7 +78,10 @@
         </dd>
     </dl>
 </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Edit</a> |
     <a asp-action="Index" class="btn">Back to List</a>

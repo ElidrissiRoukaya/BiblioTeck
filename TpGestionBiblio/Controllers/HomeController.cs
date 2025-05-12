@@ -13,11 +13,15 @@ namespace TpGestionBiblio.Controllers
             _logger = logger;
         }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
         public IActionResult Index()
         {
             return View();
         }
+<<<<<<< HEAD
 
         public IActionResult Home()
         {
@@ -25,6 +29,12 @@ namespace TpGestionBiblio.Controllers
         }
         
         
+=======
+        public IActionResult dashboard()
+        {
+            return View();
+        }
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
         public IActionResult LivresDisponibles()
         {
             return View();

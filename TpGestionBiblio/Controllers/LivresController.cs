@@ -51,7 +51,12 @@ namespace TpGestionBiblio.Controllers
         }
 
         // POST: Livres/Create
+<<<<<<< HEAD
         
+=======
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Titre,Auteur,Resume,EstEmprunte")] Livre livre)
@@ -82,7 +87,12 @@ namespace TpGestionBiblio.Controllers
         }
 
         // POST: Livres/Edit/5
+<<<<<<< HEAD
       
+=======
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Titre,Auteur,Resume,EstEmprunte")] Livre livre)

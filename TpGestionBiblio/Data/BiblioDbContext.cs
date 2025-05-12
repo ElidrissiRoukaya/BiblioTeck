@@ -46,7 +46,11 @@ namespace TpGestionBiblio.Data
                 entity.Property(e => e.AbonneId).HasMaxLength(50).IsUnicode(false);
             });
 
+<<<<<<< HEAD
            
+=======
+            // Add additional configurations for other entities (Message, Blog, etc.) if needed
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
 
             // Call the base OnModelCreating method
             base.OnModelCreating(modelBuilder);

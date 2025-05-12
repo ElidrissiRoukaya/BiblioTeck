@@ -1,5 +1,9 @@
 ﻿@*
+<<<<<<< HEAD
     
+=======
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
 *@
 @{
 }
@@ -8,6 +12,7 @@
 @{
     ViewData["Title"] = "Emprunter Livres";
 }
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -79,11 +84,57 @@
 
         .btn-primary:hover {
             background-color: #e67d24;
+=======
+@{
+    ViewData["HideDefaultNavBar"] = true;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewData["Title"]</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Personnalisation des couleurs et du style */
+        .navbar {
+            background-color: #f8f9fa; /* Couleur de la barre de navigation */
+            width: 100vw; /* Largeur de la barre de navigation = largeur de la fenêtre */
+            margin-left: calc(-50vw + 50%); /* Centrage horizontal */
+        }
+
+       
+
+        h4 {
+            color: #008000; /* Bleu profond pour les sous-titres */
+        }
+
+        label {
+            color: #005d7a; /* Bleu profond pour les libellés */
+        }
+
+        input[type="text"],
+        input[type="date"],
+        .btn-primary {
+            background-color: #fff; /* Blanc pour les champs et les boutons */
+            border-color: #005d7a; /* Bleu profond pour les bordures */
+            color: #005d7a; /* Bleu profond pour le texte des champs et des boutons */
+        }
+
+            input[type="text"],
+            input[type="date"]::placeholder {
+                color: #008000; /* Bleu profond pour le texte de l'attribut placeholder */
+            }
+
+        input[type="submit"]:hover {
+            background-color: #005d7a; /* Bleu profond au survol du bouton soumettre */
+            border-color: #008000; /* Même couleur que le fond pour maintenir la couleur de la bordure */
+            color: #fff; /* Texte blanc au survol */
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
         }
     </style>
 </head>
 <body>
     <header>
+<<<<<<< HEAD
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-controller="Home" asp-action="Index">BiblioNet</a>
@@ -96,11 +147,29 @@
                             <a class="nav-link" asp-controller="Home" asp-action="Index">Accueil</a>
                         </li>
                        
+=======
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand text-dark" asp-area="" asp-controller="Home" asp-action="Index">TpGestionBiblio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+<<<<<<< HEAD
 
     <div class="form-container">
         <h4>@ViewData["Title"]</h4>
@@ -136,5 +205,42 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+=======
+    <div class="container">
+        <h4>Emprunter un livre</h4>
+        <div class="row">
+            <div class="col-md-6">
+                <form asp-action="EmprunterLivre">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="LivreId" class="control-label">ID du Livre à emprunter</label>
+                        <input asp-for="LivreId" class="form-control" />
+                        <span asp-validation-for="LivreId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="AbonneId" class="control-label">Votre ID</label>
+                        <input asp-for="AbonneId" class="form-control" />
+                        <span asp-validation-for="AbonneId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DateEmprunt" class="control-label">Date d'emprunt</label>
+                        <input asp-for="DateEmprunt" class="form-control" type="date" />
+                        <span asp-validation-for="DateEmprunt" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DateRetour" class="control-label">Date de retour</label>
+                        <input asp-for="DateRetour" class="form-control" type="date" />
+                        <span asp-validation-for="DateRetour" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Empruntez le Livre" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
 </body>
 </html>

@@ -1,24 +1,39 @@
 ﻿@model Abonne
+<<<<<<< HEAD
 @{
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
     ViewData["Title"] = "Dashboard";
 }
+=======
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
 
 @{
     ViewData["Title"] = "Create";
 }
 <style>
+<<<<<<< HEAD
+=======
+    /* Style pour le titre */
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
     h1 {
         color: #1E90FF;
         font-size: 24px;
         margin-bottom: 20px;
     }
 
+<<<<<<< HEAD
+=======
+    /* Style pour les libellés */
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
     label {
         color: #696969;
         margin-bottom: 5px;
     }
 
+<<<<<<< HEAD
+=======
+    /* Style pour les champs de saisie */
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
     .form-control {
         width: 100%;
         padding: 8px;
@@ -27,6 +42,10 @@
         border-radius: 4px;
     }
 
+<<<<<<< HEAD
+=======
+    /* Style pour le bouton */
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
     .btn-primary {
         background-color: #1E90FF;
         color: white;
@@ -36,18 +55,34 @@
         cursor: pointer;
     }
 
+<<<<<<< HEAD
     .btn-primary:hover {
         background-color: #4682B4;
     }
 
+=======
+        /* Style au survol du bouton */
+        .btn-primary:hover {
+            background-color: #4682B4;
+        }
+
+    /* Style pour le lien */
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
     a {
         color: #1E90FF;
         text-decoration: none;
     }
 
+<<<<<<< HEAD
     a:hover {
         text-decoration: underline;
     }
+=======
+        /* Style au survol du lien */
+        a:hover {
+            text-decoration: underline;
+        }
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
 </style>
 
 <h1>Create</h1>
@@ -58,18 +93,25 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
             <div class="form-group">
                 <label asp-for="Nom" class="control-label"></label>
                 <input asp-for="Nom" class="form-control" />
                 <span asp-validation-for="Nom" class="text-danger"></span>
             </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
             <div class="form-group">
                 <label asp-for="Prenom" class="control-label"></label>
                 <input asp-for="Prenom" class="form-control" />
                 <span asp-validation-for="Prenom" class="text-danger"></span>
             </div>
+<<<<<<< HEAD
 
             <div class="form-group">
                 <label asp-for="Username" class="control-label"></label>
@@ -83,6 +125,8 @@
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
 
+=======
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

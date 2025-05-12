@@ -1,8 +1,11 @@
 ﻿@model IEnumerable<Emprunt>
+<<<<<<< HEAD
 @{
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
     ViewData["Title"] = "Dashboard";
 }
+=======
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
 
 @{
     ViewData["Title"] = "Index";
@@ -52,7 +55,13 @@
 </style>
 <h1>Gestions des emprunts</h1>
 
+<<<<<<< HEAD
 
+=======
+<p>
+    <a asp-action="Create" class="btn btn-primary">Ajouter un emprunt</a>
+</p>
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
 <table class="table">
     <thead>
         <tr>
@@ -68,7 +77,11 @@
             <th>
                 @Html.DisplayNameFor(model => model.DateRetour)
             </th>
+<<<<<<< HEAD
             <th colspan="3">Actions</th>
+=======
+            <th></th>
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
         </tr>
     </thead>
     <tbody>
@@ -88,6 +101,7 @@
                     @Html.DisplayFor(modelItem => item.DateRetour)
                 </td>
                 <td>
+<<<<<<< HEAD
                 <a asp-action="Edit" asp-route-id="@item.Id">
                     <img src="https://cdn-icons-png.flaticon.com/128/1159/1159633.png" width="30" height="30"  /> 
                 </a>
@@ -101,6 +115,11 @@
                 <a asp-action="Delete" asp-route-id="@item.Id">
                         <img src="https://cdn-icons-png.flaticon.com/128/484/484611.png" width="30" height="30" /> 
                 </a>
+=======
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info btn-action">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-success btn-action">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-action">Delete</a>
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
                 </td>
             </tr>
         }

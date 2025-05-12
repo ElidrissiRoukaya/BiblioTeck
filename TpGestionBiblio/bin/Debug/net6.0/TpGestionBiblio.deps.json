@@ -14,14 +14,19 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.24",
           "Microsoft.EntityFrameworkCore.Sqlite": "6.0.23",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.23",
+<<<<<<< HEAD
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.16",
           "MySql.Data": "8.0.28",
           "Pomelo.EntityFrameworkCore.MySql": "6.0.2"
+=======
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.16"
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
         },
         "runtime": {
           "TpGestionBiblio.dll": {}
         }
       },
+<<<<<<< HEAD
       "BouncyCastle.NetCore/1.8.5": {
         "runtime": {
           "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
@@ -43,6 +48,9 @@
           }
         }
       },
+=======
+      "FontAwesome/4.7.0": {},
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
       "Humanizer/2.14.1": {
         "dependencies": {
           "Humanizer.Core.af": "2.14.1",
@@ -583,6 +591,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "K4os.Compression.LZ4/1.2.6": {
         "dependencies": {
           "System.Memory": "4.5.5"
@@ -617,6 +626,8 @@
           }
         }
       },
+=======
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
       "MessagePack/2.1.152": {
         "dependencies": {
           "MessagePack.Annotations": "2.1.152",
@@ -1617,6 +1628,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "MySql.Data/8.0.28": {
         "dependencies": {
           "BouncyCastle.NetCore": "1.8.5",
@@ -1651,6 +1663,8 @@
           }
         }
       },
+=======
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
       "NETStandard.Library/1.6.1": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -1808,6 +1822,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "Pomelo.EntityFrameworkCore.MySql/6.0.2": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Relational": "6.0.24",
@@ -1821,6 +1836,8 @@
           }
         }
       },
+=======
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -2823,6 +2840,7 @@
       "serviceable": false,
       "sha512": ""
     },
+<<<<<<< HEAD
     "BouncyCastle.NetCore/1.8.5": {
       "type": "package",
       "serviceable": true,
@@ -2830,6 +2848,8 @@
       "path": "bouncycastle.netcore/1.8.5",
       "hashPath": "bouncycastle.netcore.1.8.5.nupkg.sha512"
     },
+=======
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
     "FontAwesome/4.7.0": {
       "type": "package",
       "serviceable": true,
@@ -2837,6 +2857,7 @@
       "path": "fontawesome/4.7.0",
       "hashPath": "fontawesome.4.7.0.nupkg.sha512"
     },
+<<<<<<< HEAD
     "Google.Protobuf/3.14.0": {
       "type": "package",
       "serviceable": true,
@@ -2844,6 +2865,8 @@
       "path": "google.protobuf/3.14.0",
       "hashPath": "google.protobuf.3.14.0.nupkg.sha512"
     },
+=======
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
     "Humanizer/2.14.1": {
       "type": "package",
       "serviceable": true,
@@ -3194,6 +3217,7 @@
       "path": "humanizer.core.zh-hant/2.14.1",
       "hashPath": "humanizer.core.zh-hant.2.14.1.nupkg.sha512"
     },
+<<<<<<< HEAD
     "K4os.Compression.LZ4/1.2.6": {
       "type": "package",
       "serviceable": true,
@@ -3215,6 +3239,8 @@
       "path": "k4os.hash.xxhash/1.0.6",
       "hashPath": "k4os.hash.xxhash.1.0.6.nupkg.sha512"
     },
+=======
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
     "MessagePack/2.1.152": {
       "type": "package",
       "serviceable": true,
@@ -3677,6 +3703,7 @@
       "path": "microsoft.win32.systemevents/6.0.0",
       "hashPath": "microsoft.win32.systemevents.6.0.0.nupkg.sha512"
     },
+<<<<<<< HEAD
     "MySql.Data/8.0.28": {
       "type": "package",
       "serviceable": true,
@@ -3691,6 +3718,8 @@
       "path": "mysqlconnector/2.1.2",
       "hashPath": "mysqlconnector.2.1.2.nupkg.sha512"
     },
+=======
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
     "NETStandard.Library/1.6.1": {
       "type": "package",
       "serviceable": true,
@@ -3768,6 +3797,7 @@
       "path": "nuget.versioning/6.6.1",
       "hashPath": "nuget.versioning.6.6.1.nupkg.sha512"
     },
+<<<<<<< HEAD
     "Pomelo.EntityFrameworkCore.MySql/6.0.2": {
       "type": "package",
       "serviceable": true,
@@ -3775,6 +3805,8 @@
       "path": "pomelo.entityframeworkcore.mysql/6.0.2",
       "hashPath": "pomelo.entityframeworkcore.mysql.6.0.2.nupkg.sha512"
     },
+=======
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
       "serviceable": true,

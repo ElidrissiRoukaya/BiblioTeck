@@ -3,10 +3,13 @@
 @{
     ViewData["Title"] = "Index";
 }
+<<<<<<< HEAD
 @{
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
     ViewData["Title"] = "Dashboard";
 }
+=======
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
 
 <!DOCTYPE html>
 <html>
@@ -41,6 +44,7 @@
         }
 
         /* Style pour les cellules d'en-tête */
+<<<<<<< HEAD
        th {
         background-color: #FFE4C4;
         color: #008000;
@@ -48,6 +52,16 @@
         padding: 10px;
         text-align: left;
     }
+=======
+        th {
+            background-color: #f8f9fa;
+            color: #BDB76B;
+            font-weight: bold;
+            padding: 10px;
+            text-align: left;
+            border-bottom: 2px solid #dee2e6;
+        }
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
 
         /* Style pour les lignes de données */
         td {
@@ -73,7 +87,11 @@
         <h1>Gestion des abonnés</h1>
 
         <p class="action-links">
+<<<<<<< HEAD
             <a asp-action="Create">Ajouter un abonné</a>
+=======
+            <a asp-action="Create">Create New</a>
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
         </p>
 
         <table class="table">
@@ -88,12 +106,15 @@
                     <th>
                         @Html.DisplayNameFor(model => model.FirstOrDefault().Prenom)
                     </th>
+<<<<<<< HEAD
                     <th>
                         @Html.DisplayNameFor(model => model.FirstOrDefault().Username)
                     </th>
                     <th>
                         @Html.DisplayNameFor(model => model.FirstOrDefault().Password)
                     </th>
+=======
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
                     <th >Actions</th>
                 </tr>
             </thead>
@@ -111,12 +132,15 @@
                             @Html.DisplayFor(modelItem => item.Prenom)
                         </td>
                         <td>
+<<<<<<< HEAD
                             @Html.DisplayFor(modelItem => item.Username)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.Password)
                         </td>
                         <td>
+=======
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
                             <a asp-action="Edit" asp-route-id="@item.Id">
                                 <img src="https://cdn-icons-png.flaticon.com/128/1159/1159633.png" width="30" height="30" />
                             </a>

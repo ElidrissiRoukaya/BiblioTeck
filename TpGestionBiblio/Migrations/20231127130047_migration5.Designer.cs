@@ -2,10 +2,8 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-<<<<<<< HEAD
-=======
 using Microsoft.EntityFrameworkCore.Metadata;
->>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TpGestionBiblio.Data;
 
@@ -14,20 +12,17 @@ using TpGestionBiblio.Data;
 namespace TpGestionBiblio.Migrations
 {
     [DbContext(typeof(BiblioDbContext))]
-    partial class BiblioDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231127130047_migration5")]
+    partial class migration5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "6.0.24")
-<<<<<<< HEAD
-                .HasAnnotation("Relational:MaxIdentifierLength", 64);
-=======
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
->>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
 
             modelBuilder.Entity("Abonne", b =>
                 {
@@ -35,33 +30,18 @@ namespace TpGestionBiblio.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-<<<<<<< HEAD
-=======
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
->>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
                     b.Property<string>("Nom")
                         .HasMaxLength(50)
                         .IsUnicode(false)
                         .HasColumnType("varchar(50)");
 
-<<<<<<< HEAD
-                    b.Property<string>("Password")
-                        .HasColumnType("longtext");
-
-=======
->>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
                     b.Property<string>("Prenom")
                         .HasMaxLength(50)
                         .IsUnicode(false)
                         .HasColumnType("varchar(50)");
 
-<<<<<<< HEAD
-                    b.Property<string>("Username")
-                        .HasColumnType("longtext");
-
-=======
->>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
                     b.HasKey("Id")
                         .HasName("PK_Abonne");
 
@@ -74,11 +54,8 @@ namespace TpGestionBiblio.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-<<<<<<< HEAD
-=======
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
->>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
                     b.Property<int>("AbonneId")
                         .HasMaxLength(50)
                         .IsUnicode(false)
@@ -87,20 +64,12 @@ namespace TpGestionBiblio.Migrations
                     b.Property<DateTime>("DateEmprunt")
                         .HasMaxLength(50)
                         .IsUnicode(false)
-<<<<<<< HEAD
-                        .HasColumnType("datetime(6)");
-=======
                         .HasColumnType("datetime2");
->>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
 
                     b.Property<DateTime>("DateRetour")
                         .HasMaxLength(50)
                         .IsUnicode(false)
-<<<<<<< HEAD
-                        .HasColumnType("datetime(6)");
-=======
                         .HasColumnType("datetime2");
->>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
 
                     b.Property<int>("LivreId")
                         .HasMaxLength(50)
@@ -123,11 +92,8 @@ namespace TpGestionBiblio.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-<<<<<<< HEAD
-=======
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
->>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
                     b.Property<string>("Auteur")
                         .HasMaxLength(50)
                         .IsUnicode(false)
@@ -136,11 +102,7 @@ namespace TpGestionBiblio.Migrations
                     b.Property<bool>("EstEmprunte")
                         .HasMaxLength(50)
                         .IsUnicode(false)
-<<<<<<< HEAD
-                        .HasColumnType("tinyint(50)");
-=======
                         .HasColumnType("bit");
->>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
 
                     b.Property<string>("Resume")
                         .HasMaxLength(50)

@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\hp\\Downloads\\GestionBiblioth-queCRUD--main\\GestionBiblioth-queCRUD--main\\TpGestionBiblio\\TpGestionBiblio.csproj": {}
   },
   "projects": {
@@ -19,11 +20,32 @@
         "configFilePaths": [
           "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
+=======
+    "C:\\Users\\USER\\source\\repos\\TpGestionBiblio\\TpGestionBiblio\\TpGestionBiblio.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\USER\\source\\repos\\TpGestionBiblio\\TpGestionBiblio\\TpGestionBiblio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\USER\\source\\repos\\TpGestionBiblio\\TpGestionBiblio\\TpGestionBiblio.csproj",
+        "projectName": "TpGestionBiblio",
+        "projectPath": "C:\\Users\\USER\\source\\repos\\TpGestionBiblio\\TpGestionBiblio\\TpGestionBiblio.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USER\\source\\repos\\TpGestionBiblio\\TpGestionBiblio\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+<<<<<<< HEAD
+=======
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -71,6 +93,7 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.16, )"
+<<<<<<< HEAD
             },
             "MySql.Data": {
               "target": "Package",
@@ -79,6 +102,8 @@
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[6.0.2, )"
+=======
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
             }
           },
           "imports": [
@@ -99,7 +124,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.136\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.319\\RuntimeIdentifierGraph.json"
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
         }
       }
     }

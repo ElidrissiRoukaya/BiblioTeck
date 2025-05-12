@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 ﻿@model Abonne 
 @{
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
     ViewData["Title"] = "Dashboard";
 }
+=======
+﻿@model Abonne // Assurez-vous d'avoir le bon modèle Abonne
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
 
 @{
     ViewData["Title"] = "Détails de l'Abonné";
@@ -16,6 +20,11 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /* Styles personnalisés */
+<<<<<<< HEAD
+=======
+       
+
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
         h1 {
             color:  #006400;
         }
@@ -65,6 +74,7 @@
                     @Html.DisplayFor(model => model.Prenom)
                 </dd>
 
+<<<<<<< HEAD
                 <dt class="col-sm-2">
                     @Html.DisplayNameFor(model => model.Username)
                 </dt>
@@ -112,6 +122,45 @@
             <p>Pas d'emprunts pour cet abonné.</p>
         }
     </div>
+=======
+                <!-- Autres champs d'abonné à afficher -->
+            </dl>
+        </div>
+
+            <h4>Emprunts</h4>
+            <hr />
+            @if (emprunts != null && emprunts.Any())
+            {
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID de livre</th>
+                            <th>Date Emprunt</th>
+                            <th>Date Retour</th>
+                            <!-- Autres en-têtes de colonnes pour les détails de l'emprunt -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var emprunt in emprunts)
+                        {
+                            <tr>
+                                <td>@emprunt.LivreId</td>
+                                <td>@emprunt.DateEmprunt.ToShortDateString()</td>
+                                <td>@emprunt.DateRetour.ToShortDateString()</td>
+                                <!-- Autres colonnes pour les détails de l'emprunt -->
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p>Pas d'emprunts pour cet abonné.</p>
+            }
+        </div>
+   
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>

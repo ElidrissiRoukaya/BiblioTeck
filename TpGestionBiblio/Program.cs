@@ -1,9 +1,12 @@
 using TpGestionBiblio.Data;
 using Microsoft.EntityFrameworkCore;
+<<<<<<< HEAD
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
+=======
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
 namespace TpGestionBiblio
 {
     public class Program
@@ -11,6 +14,7 @@ namespace TpGestionBiblio
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+<<<<<<< HEAD
 
             // Ajouter les services à la collection pour les contrôleurs et les vues
             builder.Services.AddControllersWithViews();
@@ -83,3 +87,41 @@ namespace TpGestionBiblio
         }
     }
 }
+=======
+            // Configuration du serveur web
+
+
+            // Add services to the container.
+            builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<BiblioDbContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("TpGestionBiblioConnectionString")));
+            var app = builder.Build();
+
+            // Configure the HTTP request pipeline.
+            if (!app.Environment.IsDevelopment())
+            {
+                app.UseExceptionHandler("/Home/Error");
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseHsts();
+            }
+
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
+
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}");
+            app.MapControllerRoute(
+                 name: "ListeDisponiblesRoute",
+        pattern: "Livres/ListeDisponibles",
+        defaults: new { controller = "Livres", action = "ListeDisponibles" });
+
+            app.Run();
+        }
+    }
+}
+>>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04

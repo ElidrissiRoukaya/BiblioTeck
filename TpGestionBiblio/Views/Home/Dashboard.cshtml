@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Titre de la page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Personnalisation des couleurs et des styles */
+        .card-img-top {
+            height: 300px; /* Taille fixe pour les images des cartes */
+            object-fit: cover; /* Ajustement de l'image pour remplir la zone */
+        }
+
+        .btn-primary {
+            background-color: #007bff; /* Bleu primaire pour le bouton */
+            border-color: #007bff; /* Couleur de la bordure du bouton */
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3; /* Bleu foncé au survol */
+                border-color: #0056b3; /* Couleur de la bordure au survol */
+            }
+
+        .btn-success {
+            background-color: #28a745; /* Vert pour le bouton success */
+            border-color: #28a745; /* Couleur de la bordure du bouton success */
+        }
+
+            .btn-success:hover {
+                background-color: #218838; /* Vert foncé au survol */
+                border-color: #218838; /* Couleur de la bordure au survol */
+            }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://th.bing.com/th/id/OIP.SfuSEWfPgayvWBOb8zc3lQHaHa?rs=1&pid=ImgDetMain" class="card-img-top" alt="Image Livres">
+                    <div class="card-body">
+                        <h5 class="card-title">Gérer les Livres</h5>
+                        <p class="card-text">
+                            <a href="@Url.Action("Index", "Livres")" class="btn btn-primary">Liste des Livres</a>
+                            <a href="@Url.Action("Create", "Livres")" class="btn btn-success">Ajouter un Livre</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://cdn.goconqr.com/uploads/media/image/26090333/desktop_72e45c8e-09f4-4194-abcd-a0917a65e8bb.png" class="card-img-top" alt="Image Abonnés">
+                    <div class="card-body">
+                        <h5 class="card-title">Gérer les Abonnés</h5>
+                        <p class="card-text">
+                            <a href="@Url.Action("Index", "Abonnes")" class="btn btn-primary">Les Abonnés</a>
+                            <a href="@Url.Action("Create", "Abonnes")" class="btn btn-success">Ajouter un Abonné</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://th.bing.com/th/id/R.b1f3fc6646fdca55fb0c153d84f320be?rik=VRhFNN3FfiukhQ&pid=ImgRaw&r=0" class="card-img-top" alt="Image Emprunts">
+                    <div class="card-body">
+                        <h5 class="card-title">Gérer les Emprunts</h5>
+                        <p class="card-text">
+                            <a href="@Url.Action("Index", "Emprunts")" class="btn btn-primary">Les Emprunts</a>
+                            <a href="@Url.Action("Create", "Emprunts")" class="btn btn-success">Ajouter un Emprunt</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
