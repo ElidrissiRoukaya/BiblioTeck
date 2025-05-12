@@ -1,0 +1,127 @@
+﻿@model IEnumerable<Livre>
+
+@{
+    ViewData["Title"] = "Gestion des Livres";
+}
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewData["Title"] = "Dashboard";
+}
+
+<style>
+    /* Style pour le titre */
+    h1 {
+        color: #008000;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    /* Style pour les liens */
+    a {
+        color: #BDB76B;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+
+        /* Style pour les liens au survol */
+        a:hover {
+            text-decoration: underline;
+        }
+
+    /* Style pour le tableau */
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    /* Style pour les cellules d'en-tête */
+    th {
+        background-color: #FFE4C4;
+        color: #008000;
+        font-weight: bold;
+        padding: 10px;
+        text-align: left;
+    }
+
+    /* Style pour les cellules de données */
+    td {
+        padding: 10px;
+        border-bottom: 1px solid #008000;
+    }
+
+        
+</style>
+<head>
+    
+    <!-- Font Awesome -->
+    <link href="~/lib/fontawesome/css/all.min.css" rel="stylesheet" />
+</head>
+
+
+<h1>Gestion des livres</h1>
+
+<p>
+    <a asp-action="Create" >Ajouter un Livre</a>
+</p>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Titre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Auteur)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Resume)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstEmprunte)
+            </th>
+            <th colspan="3">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Titre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Auteur)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Resume)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EstEmprunte)
+                </td>
+                <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1159/1159633.png" width="30" height="30"  /> 
+                </a>
+                </td>
+                <td>
+                <a asp-action="Details" asp-route-id="@item.Id">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2767/2767194.png" width="30" height="30" /> 
+                </a>
+                </td>
+                <td>
+                <a asp-action="Delete" asp-route-id="@item.Id">
+                        <img src="https://cdn-icons-png.flaticon.com/128/484/484611.png" width="30" height="30" /> 
+                </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

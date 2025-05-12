@@ -1,0 +1,139 @@
+﻿@{
+    ViewData["Title"] = "Bienvenue dans  notre Bibliothèque";
+}
+@{
+    ViewData["HideDefaultNavBar"] = true;
+}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #fef6f0, #ffd79f);
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 24px;
+            color: #ff8c2e !important;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: #444 !important;
+            margin-left: 15px;
+        }
+
+        .title {
+            font-size: 40px;
+            font-weight: 700;
+            color: #ff8c2e;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+
+        .bg-library {
+            padding: 40px 20px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card-title {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #ff8c2e;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #e67d24;
+        }
+
+        .btn-success {
+            background-color: #2ecc71;
+            border: none;
+        }
+
+        .btn-success:hover {
+            background-color: #27ae60;
+        }
+
+        img {
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BiblioNet</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="content">
+        <div class="topbar">
+         
+            <form asp-controller="UserAuth" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Déconnexion</button>
+            </form>
+        </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="bg-library text-center">
+        <h2 class="title">@ViewData["Title"] 😊</h2>
+        <img src="https://th.bing.com/th?id=OIP.QhQeY9ouz4UIXZWvIGnYMAHaIa&w=234&h=266&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Lecture" class="img-fluid mx-auto d-block" style="max-width: 200px; margin-bottom: 30px;">
+
+        <div class="container mt-4">
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card p-4">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Emprunter un Livre</h3>
+                            <a asp-action="Emprunterlivre" asp-controller="Emprunts" class="btn btn-primary w-100">Emprunter</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card p-4">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Livres Disponibles</h3>
+                            <a asp-action="LivresDisponibles" asp-controller="Emprunts" class="btn btn-success w-100">Voir les livres</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

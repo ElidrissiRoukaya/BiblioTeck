@@ -1,0 +1,61 @@
+@inject IHttpContextAccessor HttpContextAccessor
+@using Microsoft.AspNetCore.Http
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+        }
+        .sidebar a {
+            color: white;
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .topbar {
+            background-color: #f8f9fa;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h4>Admin Panel</h4>
+        <br>
+        
+          <a asp-controller="Dashboard" asp-action="Index">📊 Dashboard</a>
+
+        <a asp-controller="Livres" asp-action="Index">📚 Livres</a>
+        <a asp-controller="Abonnes" asp-action="Index">👥 Abonnés</a>
+        <a asp-controller="Emprunts" asp-action="Index">📖 Emprunts</a>
+    </div>
+    <div class="content">
+        <div class="topbar">
+            <div>Bienvenue, @HttpContextAccessor.HttpContext.Session.GetString("Username")</div>
+            <form asp-controller="UserAuth" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-danger btn-sm">Déconnexion</button>
+            </form>
+        </div>
+        <hr />
+        @RenderBody()
+    </div>
+</body>
+</html>

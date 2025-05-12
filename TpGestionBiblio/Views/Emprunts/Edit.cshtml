@@ -1,0 +1,111 @@
+﻿@model Emprunt
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewData["Title"] = "Dashboard";
+}
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+       
+
+        h1 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        h4 {
+            color: #28a745;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+
+        a {
+            color: #007bff;
+            display: inline-block;
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Emprunt</h1>
+
+        <div>
+           
+            <hr />
+            <div class="row">
+                <div class="col-md-4">
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+                        <div class="form-group">
+                            <label asp-for="LivreId" class="control-label"></label>
+                            <input asp-for="LivreId" class="form-control" />
+                            <span asp-validation-for="LivreId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="AbonneId" class="control-label"></label>
+                            <input asp-for="AbonneId" class="form-control" />
+                            <span asp-validation-for="AbonneId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="DateEmprunt" class="control-label"></label>
+                            <input asp-for="DateEmprunt" class="form-control" />
+                            <span asp-validation-for="DateEmprunt" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="DateRetour" class="control-label"></label>
+                            <input asp-for="DateRetour" class="form-control" />
+                            <span asp-validation-for="DateRetour" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+           
+        </div>
+        <div>
+            <a asp-action="Index">Back to List</a>
+        </div>
+        <br /><br />
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
