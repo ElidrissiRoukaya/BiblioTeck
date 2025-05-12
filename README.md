@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # 📚 Application de Gestion de Bibliothèque
 
 Cette simple application web a été développée dans le but de se familiariser avec le framework .NET et de maîtriser les opérations CRUD (Créer, Lire, Mettre à jour, Supprimer). Elle permet de gérer efficacement les livres d'une bibliothèque, les abonnés, ainsi que les emprunts .
@@ -54,4 +54,3 @@ Cette application simple a été développée pour se familiariser avec le frame
 - **HTML / CSS** : Pour la présentation et le style de l'interface utilisateur.
 - **Bootstrap** : Utilisé pour créer une interface responsive et attrayante.
 - **MySQL** : Pour la gestion des données dans la base de données.
->>>>>>> 92c770d0feb2ddd9c80b368bff42843f30b8fc04
