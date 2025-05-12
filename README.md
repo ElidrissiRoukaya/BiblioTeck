@@ -8,7 +8,7 @@ Chaque abonné dispose d’un espace personnel sécurisé, accessible après aut
 ## 🛠️ Technologies Utilisées
 
 - **ASP.NET MVC (C#)** : Pour le développement côté serveur.
-- **HTML / CSS / Bootstrap** : Pour la conception d'une interface utilisateur responsive et attrayante.
+- **HTML / CSS / Bootstrap** : Pour la conception d'une interface utilisateur .
 - **MySQL** : Pour la gestion des données et le stockage des informations.
 
 ## 🎯 Fonctionnalités Principales
